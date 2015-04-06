@@ -23,4 +23,13 @@
     ;; paren
     `(show-paren-match ((t (:inverse-video nil :underline ,my/sct-yellow
                             :slant normal :weight extra-bold))))
+
+    ;; modeline
+    `(mode-line ((t (:background ,my/sct-base02 :foreground ,my/sct-base1
+                     :inverse-video nil :box (:line-width 2 :color ,my/sct-base02)
+                     :weight normal :height 120))))
+    `(mode-line-inactive ((t (:background ,my/sct-base01 :foreground ,my/sct-base00
+                              :inverse-video nil
+                              :box (:line-width 2 :color ,my/sct-base01)
+                              :weight extra-light :height 120))))
 ))
