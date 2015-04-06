@@ -25,6 +25,8 @@
     auto-save-buffers-enhanced
     backup-each-save
     recentf-ext
+    color-theme
+    color-theme-solarized
     migemo
     ddskk
     ))
