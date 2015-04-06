@@ -34,7 +34,7 @@
   ;; mode-line が動くのが許せないので，ちょっと修正
   ;;; https://github.com/uwabami/emacs
   (defadvice skk-make-indicator-alist
-    (after my/set-skk-default-indicator activate)
+      (after my/set-skk-default-indicator activate)
   (dolist (elem
             '((abbrev " [aA]" . "--[aA]:")
                (latin " [_A]" . "--[_A]:")
@@ -43,16 +43,13 @@
           (append (cons elem nil)
                   (delq (assoc (car elem) ad-return-value)
                                           ad-return-value)))))
-  ;; 起動時からモードライン上にインジケータを表示する
-  (skk-update-modeline)
-  ;; *** flozen ****
   ;; 起動時からモードライン上にインジケータを表示するための工夫
   ;;; https://github.com/uwabami/emacs
-  ;(defun my/update-modeline-for-ddskk ()
-  ;  "To switch to SKK mode once when switching to major mode."
-  ;  (progn
-  ;    (skk-mode) (skk-mode)))
-  ;(add-hook 'after-change-major-mode-hook 'my/update-modeline-for-ddskk)
+  (defun my/update-modeline-for-ddskk ()
+    "To switch to SKK mode once when switching to major mode."
+    (progn
+      (skk-mode) (skk-mode)))
+  (add-hook 'after-change-major-mode-hook 'my/update-modeline-for-ddskk)
   ;; *** flozen ****
   ;; 変換の学習
   (use-package skk-study)
@@ -84,11 +81,4 @@
   ;; AZIK 入力モード
   (setq skk-use-azik t)
   (setq skk-azik-keyboard-type 'us101)
-  ;; 起動時からモードライン上にインジケータを表示するための工夫
-  ;;; https://github.com/uwabami/emacs
-  (defun my:update-modeline-for-ddskk ()
-    ""
-    (progn
-      (skk-mode) (skk-mode)))
-  (add-hook 'after-change-major-mode-hook 'my:update-modeline-for-ddskk)
 )

@@ -73,7 +73,7 @@
 (custom-set-faces
   `(mode-line-base-face ((t (:foreground ,my/sct-base1 :inverse-video nil
                              :weight normal :height 110 :family "MeiryoKe_UIGothic"))))
-  `(mode-line-base-mono-face ((t (:inherit mode-line-base-face :family "MeiryoKe_Gothic"))))
+  `(mode-line-base-mono-face ((t (:inherit mode-line-base-face :height 120 :family "Ricty"))))
   `(mode-line-read-only-face ((t (:inherit mode-line-base-mono-face :foreground ,my/sct-blue
                                   :box (:line-width 2 :color ,my/sct-blue)))) t)
   `(mode-line-modified-face ((t (:inherit mode-line-base-mono-face :foreground ,my/sct-red
