@@ -22,6 +22,9 @@
     ;; ここに使っているパッケージを書く。
     use-package
     init-loader
+    auto-save-buffers-enhanced
+    backup-each-save
+    recentf-ext
     ))
 (let ((not-installed (cl-loop for x in installing-package-list
                        when (not (package-installed-p x))

@@ -5,5 +5,11 @@
 !README.md
 
 # Git で管理しないファイル/ディレクトリのリスト
+/auto-save-list/
+/backups/
 /elpa/
 *.elc
+/emacs*
+/history
+/places
+/recentf
