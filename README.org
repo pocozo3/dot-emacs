@@ -5,6 +5,4 @@
   
 ** ライセンス
 Copyright &copy; 2015 PocotaSoft\\
-Distributed under the [MIT License][mit].\\
-
-[MIT]: http://www.opensource.org/licenses/mit-license.php
+Distributed under the [[http://www.opensource.org/licenses/mit-license.php][MIT License]].
