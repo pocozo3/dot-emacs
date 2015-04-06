@@ -1,7 +1,7 @@
 #+OPTIONS: toc:nil
 
-* dot-emacs-win
-  Configuration files for Emacs on Cygwin.
+* dot-emacs
+  Configuration files for Emacs on GNU/Linux.
   
 ** ライセンス
 Copyright (c) 2015 PocotaSoft\\
