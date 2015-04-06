@@ -57,6 +57,7 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;; モードライン用各種フェイス
 (make-face 'mode-line-base-face)
+(make-face 'mode-line-base-mono-face)
 (make-face 'mode-line-read-only-face)
 (make-face 'mode-line-modified-face)
 (make-face 'mode-line-folder-face)
@@ -71,10 +72,11 @@
 (make-face 'mode-line-global-face)
 (custom-set-faces
   `(mode-line-base-face ((t (:foreground ,my/sct-base1 :inverse-video nil
-                             :weight normal :height 110 :family "Migu 1M"))))
-  `(mode-line-read-only-face ((t (:inherit mode-line-base-face :foreground ,my/sct-blue
+                             :weight normal :height 110 :family "MeiryoKe_UIGothic"))))
+  `(mode-line-base-mono-face ((t (:inherit mode-line-base-face :family "MeiryoKe_Gothic"))))
+  `(mode-line-read-only-face ((t (:inherit mode-line-base-mono-face :foreground ,my/sct-blue
                                   :box (:line-width 2 :color ,my/sct-blue)))) t)
-  `(mode-line-modified-face ((t (:inherit mode-line-base-face :foreground ,my/sct-red
+  `(mode-line-modified-face ((t (:inherit mode-line-base-mono-face :foreground ,my/sct-red
                                  :box (:line-width 2 :color ,my/sct-red)))) t)
   `(mode-line-folder-face ((t (:inherit mode-line-base-face :foreground ,my/sct-base2
                                :weight extra-light :height 100))) t)
@@ -85,7 +87,7 @@
   `(mode-line-position-face ((t (:inherit mode-line-base-face
                                  :height 100 :family "Arial"))) t)
   `(mode-line-mode-face ((t (:inherit mode-line-base-face
-                             :foreground ,my/sct-base3))) t)
+                             :foreground ,my/sct-base3 ))) t)
   `(mode-line-minor-mode-face ((t (:inherit mode-line-mode-face
                                    :foreground ,my/sct-base00 :height 80))) t)
   `(mode-line-process-face ((t (:inherit mode-line-base-face
@@ -101,7 +103,8 @@
 (setq-default mode-line-format
   '(
     "%e"
-    mode-line-mule-info
+    (:propertize mode-line-mule-info
+                 face mode-line-base-mono-face)
     ;; emacsclient [default -- keep?]
     mode-line-client
     mode-line-remote
