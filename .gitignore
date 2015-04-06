@@ -1,0 +1,9 @@
+# Git で管理するファイル/ディレクトリのリスト
+!/site-lisp/
+!/inits/
+!/init.el
+!README.md
+
+# Git で管理しないファイル/ディレクトリのリスト
+/elpa/
+*.elc
