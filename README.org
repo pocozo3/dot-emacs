@@ -1,0 +1,10 @@
+#+OPTIONS: toc:nil
+
+* dot-emacs-win
+  Configuration files for Emacs on Cygwin.
+  
+** ライセンス
+Copyright &copy; 2015 PocotaSoft\\
+Distributed under the [MIT License][mit].\\
+
+[MIT]: http://www.opensource.org/licenses/mit-license.php
