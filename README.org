@@ -4,5 +4,5 @@
   Configuration files for Emacs on Cygwin.
   
 ** ライセンス
-Copyright &copy; 2015 PocotaSoft\\
+Copyright (c) 2015 PocotaSoft\\
 Distributed under the [[http://www.opensource.org/licenses/mit-license.php][MIT License]].
