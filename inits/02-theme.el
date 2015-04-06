@@ -15,4 +15,12 @@
   ;; Dark スキーマを使用
   (set-frame-parameter nil 'background-mode 'dark)
   (enable-theme 'solarized)
-)
+   ;; 追加の色設定
+  (custom-theme-set-faces
+    ;; テーマ名
+    'solarized
+
+    ;; paren
+    `(show-paren-match ((t (:inverse-video nil :underline ,my/sct-yellow
+                            :slant normal :weight extra-bold))))
+))

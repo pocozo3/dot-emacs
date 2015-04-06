@@ -18,4 +18,12 @@
   (setq skk-isearch-mode-enable nil)
   ;; Sticky キー
   (setq skk-sticky-key "'")
+  ;; 各種メッセージを日本語で通知する
+  (setq skk-japanese-message-and-error t)
+  ;; メニューを日本語にしない
+  (setq skk-show-japanese-menu nil)
+  ;; インジケータに色を付けない
+  (setq skk-indicator-use-cursor-color nil)
+  ;; 変換の学習
+  (use-package skk-study)
 )
