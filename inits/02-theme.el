@@ -32,4 +32,8 @@
                               :inverse-video nil
                               :box (:line-width 2 :color ,my/sct-base01)
                               :weight extra-light :height 120))))
+    ;; whitespace
+    `(whitespace-newline ((t (:foreground ,my/sct-violet :weight normal))))
+    `(whitespace-space ((t (:foreground ,my/sct-violet))))
+    `(whitespace-tab ((t (:foreground ,my/sct-violet))))
 ))

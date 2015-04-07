@@ -29,6 +29,7 @@
     color-theme-solarized
     migemo
     ddskk
+    smart-newline
     ))
 (let ((not-installed (cl-loop for x in installing-package-list
                        when (not (package-installed-p x))

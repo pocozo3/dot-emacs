@@ -9,6 +9,7 @@
 /backups/
 /elpa/
 *.elc
+/.emacs*
 /emacs*
 /history
 /places

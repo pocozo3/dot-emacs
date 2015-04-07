@@ -24,8 +24,8 @@
   (setq skk-japanese-message-and-error t)
   ;; メニューを日本語にしない
   (setq skk-show-japanese-menu nil)
-  ;; インジケータに色を付けない
-  (setq skk-indicator-use-cursor-color nil)
+  ;; インジケータに色を付ける
+  (setq skk-indicator-use-cursor-color t)
   ;; 各インジケータのカスタマイズ
   (setq skk-hiragana-mode-string "[あ]")
   (setq skk-katakana-mode-string "[ア]")
