@@ -24,6 +24,16 @@
   (setq skk-japanese-message-and-error t)
   ;; メニューを日本語にしない
   (setq skk-show-japanese-menu nil)
+  ;; カーソルに色を付ける
+  (setq skk-use-color-cursor t)
+  (when skk-use-color-cursor
+    (custom-set-variables
+     `(skk-cursor-hiragana-color       ,my/sct-red)
+     `(skk-cursor-katakana-color       ,my/sct-green)
+     `(skk-cursor-abbrev-color         ,my/sct-blue)
+     `(skk-cursor-jisx0208-latin-color ,my/sct-yellow)
+     `(skk-cursor-jisx0201-color       ,my/sct-violet)
+     `(skk-cursor-latin-color          ,my/sct-base0)))
   ;; インジケータに色を付ける
   (setq skk-indicator-use-cursor-color t)
   ;; 各インジケータのカスタマイズ
@@ -62,7 +72,7 @@
   ;; 句読点変換ルール
   (setq skk-kuten-touten-alist
     '(
-      (jp . ("．" . "，" ))
+      (jp . ("。" . "、" ))
       (en . ("." . ","))))
   ;; @で挿入する日付表示を西暦&半角に
   (setq skk-date-ad t)
