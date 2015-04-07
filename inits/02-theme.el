@@ -67,4 +67,15 @@
     `(whitespace-newline ((t (:foreground ,my/sct-violet :weight normal))))
     `(whitespace-space ((t (:foreground ,my/sct-violet))))
     `(whitespace-tab ((t (:foreground ,my/sct-violet))))
-))
+
+    ;; dired
+    `(dired-mark ((t (:inherit font-lock-keyword-face))))
+    `(dired-symlink ((t (:inherit font-lock-constant-face))))
+    `(dired-async-message ((t (:foreground ,my/sct-yellow))))
+    `(dired-async-mode-message ((t (:background ,my/sct-red))))
+
+    ;; direx-k
+    `(direx-k-ignored ((t (:foreground ,my/sct-base01))))
+    `(direx-k-modified ((t (:foreground ,my/sct-orange :weight bold))))
+    `(direx-k-untracked ((t (:foreground ,my/sct-green))))
+    ))
