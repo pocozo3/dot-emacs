@@ -74,8 +74,80 @@
     `(dired-async-message ((t (:foreground ,my/sct-yellow))))
     `(dired-async-mode-message ((t (:background ,my/sct-red))))
 
-    ;; direx-k
-    `(direx-k-ignored ((t (:foreground ,my/sct-base01))))
-    `(direx-k-modified ((t (:foreground ,my/sct-orange :weight bold))))
-    `(direx-k-untracked ((t (:foreground ,my/sct-green))))
+    ;; auto-complete
+    `(ac-completion-face ((t (:foreground ,my/sct-base01 :underline t))))
+
+    ;; undo-tree
+    `(undo-tree-visualizer-active-branch-face ((t (:foreground ,my/sct-base1
+                                                   :weight bold))))
+    `(undo-tree-visualizer-current-face ((t (:foreground ,my/sct-red
+                                             :weight bold))))
+    `(undo-tree-visualizer-default-face ((t (:foreground ,my/sct-base01))))
+    `(undo-tree-visualizer-register-face ((t (:foreground ,my/sct-yellow))))
+    `(undo-tree-visualizer-unmodified-face ((t (:foreground ,my/sct-cyan))))
+
+    ;; popup
+    `(popup-face ((t (:background ,my/sct-base0 :foreground ,my/sct-base02))))
+    `(popup-menu-selection-face ((t (:background ,my/sct-cyan
+                                     :foreground ,my/sct-base3 :weight bold))))
+    `(popup-isearch-match ((t (:background ,my/sct-blue
+                               :foreground ,my/sct-base3 :weight bold))))
+    `(popup-menu-mouse-face ((t (:background ,my/sct-violet
+                                 :foreground ,my/sct-base3 :weight bold))))
+    `(popup-scroll-bar-background-face ((t (:background ,my/sct-base2))))
+    `(popup-scroll-bar-foreground-face ((t (:background ,my/sct-base02))))
+    `(popup-summary-face ((t (:inherit popup-face :foreground ,my/sct-base01))))
+    `(popup-tip-face ((t (:background ,my/sct-yellow
+                          :foreground ,my/sct-base03))))
+
+    ;; zlc
+    `(zlc-selected-completion-face ((t (:background ,my/sct-red
+                                        :foreground ,my/sct-base2 :weight bold))))
+    ;; git-rebase-mode
+    `(git-rebase-hash ((t (:foreground ,my/sct-magenta))))
+
+    ;; magit
+    `(magit-branch ((t (:background ,my/sct-base01 :foreground ,my/sct-cyan))))
+    `(magit-cherry-equivalent ((t (:foreground ,my/sct-magenta))))
+    `(magit-cherry-unmatched ((t (:foreground ,my/sct-cyan))))
+    `(magit-log-author ((t (:foreground ,my/sct-magenta))))
+    `(magit-log-graph ((t (:foreground ,my/sct-base2))))
+    `(magit-log-head-label-bisect-bad ((t (:background ,my/sct-base2
+                                           :foreground ,my/sct-red :box 1))))
+    `(magit-log-head-label-bisect-good ((t (:background ,my/sct-base01
+                                            :foreground ,my/sct-green :box 1))))
+    `(magit-log-head-label-default ((t (:background ,my/sct-base01 :box 1))))
+    `(magit-log-head-label-head ((t (:background ,my/sct-base02
+                                     :foreground ,my/sct-base3 :box 1))))
+    `(magit-log-head-label-local ((t (:background ,my/sct-base02
+                                      :foreground ,my/sct-cyan :box 1))))
+    `(magit-log-head-label-patches ((t (:background ,my/sct-base2
+                                        :foreground ,my/sct-red :box 1))))
+    `(magit-log-head-label-remote ((t (:background ,my/sct-base02
+                                       :foreground ,my/sct-green :box 1))))
+    `(magit-log-head-label-tags ((t (:background ,my/sct-base01
+                                     :foreground ,my/sct-yellow :box 1))))
+    `(magit-log-head-label-wip ((t (:background ,my/sct-base2
+                                    :foreground ,my/sct-base1 :box 1))))
+    `(magit-log-reflog-label-checkout ((t (:background ,my/sct-base02
+                                           :foreground ,my/sct-cyan :box 1))))
+    `(magit-log-reflog-label-cherry-pick ((t (:background ,my/sct-green
+                                              :foreground ,my/sct-blue :box 1))))
+    `(magit-log-reflog-label-commit ((t (:background ,my/sct-base00
+                                         :foreground ,my/sct-yellow :box 1))))
+    `(magit-log-reflog-label-other ((t (:background ,my/sct-base01 :box 1))))
+    `(magit-log-reflog-label-rebase ((t (:background ,my/sct-base03
+                                         :foreground ,my/sct-green :box 1))))
+    `(magit-log-reflog-label-remote ((t (:background ,my/sct-base01 :box 1))))
+    `(magit-log-reflog-label-reset ((t (:background ,my/sct-base2
+                                        :foreground ,my/sct-red :box 1))))
+    `(magit-log-sha1 ((t (:foreground ,my/sct-magenta))))
+    `(magit-process-ng ((t (:inherit magit-section-title
+                            :foreground ,my/sct-red))))
+    `(magit-process-ok ((t (:inherit magit-section-title
+                            :foreground ,my/sct-green))))
+    `(magit-signature-bad ((t (:foreground ,my/sct-red))))
+    `(magit-signature-good ((t (:foreground ,my/sct-green))))
+    `(magit-signature-untrusted ((t (:foreground ,my/sct-cyan))))
+    `(magit-tag ((t (:background ,my/sct-base2 :foreground ,my/sct-yellow))))
     ))
