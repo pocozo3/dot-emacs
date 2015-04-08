@@ -4,8 +4,9 @@
 ;; auto-complete: 自動補完機能
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;; ロードと設定
-(use-package auto-complete-config
+(use-package auto-complete
   :init
+  (use-package auto-complete-config)
   (use-package fuzzy)
   ;; 追加メジャーモード
   (add-to-list 'ac-modes 'org-mode)
