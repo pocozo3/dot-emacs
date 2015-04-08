@@ -2,6 +2,7 @@
 !/site-lisp/
 !/inits/
 !/init.el
+!ac-user-dict
 !README.md
 
 # Git で管理しないファイル/ディレクトリのリスト
@@ -9,6 +10,7 @@
 /backups/
 /elpa/
 *.elc
+/ac-comphist.dat
 /.emacs*
 /emacs*
 /history
