@@ -35,6 +35,9 @@
     direx
     auto-complete
     popup
+    undo-tree
+    undohist
+    point-undo
     ))
 (let ((not-installed (cl-loop for x in installing-package-list
                        when (not (package-installed-p x))
