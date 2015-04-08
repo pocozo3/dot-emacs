@@ -38,6 +38,7 @@
     undo-tree
     undohist
     point-undo
+    magit
     ))
 (let ((not-installed (cl-loop for x in installing-package-list
                        when (not (package-installed-p x))

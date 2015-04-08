@@ -9,6 +9,8 @@
 /auto-save-list/
 /backups/
 /elpa/
+/image-dired/
+/undohist/
 *.elc
 /ac-comphist.dat
 /.emacs*
