@@ -36,6 +36,7 @@
     elscreen
     elscreen-persist
     elscreen-separate-buffer-list
+    scratch-pop
     auto-complete
     popup
     undo-tree
