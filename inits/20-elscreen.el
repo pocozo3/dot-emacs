@@ -5,9 +5,6 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;; ロードと設定
 (use-package elscreen
-  :init
-  ;; 起動
-  (elscreen-start)
   :bind (
     ;; Create (バッファ構成を初期化)
     ("<f5>" . elscreen-create)
@@ -47,6 +44,8 @@
           ("-telnet" . "telnet")
           ("dict" . "OnlineDict")
           ("*WL:Message*" . "Wanderlust")))
+  ;; 起動
+  (elscreen-start)
   ;; emacsclient から呼びだされた場合、新しいタブを開く
   (use-package elscreen-server))
 
