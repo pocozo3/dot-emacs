@@ -33,6 +33,9 @@
     popwin
     async
     direx
+    elscreen
+    elscreen-persist
+    elscreen-separate-buffer-list
     auto-complete
     popup
     undo-tree

@@ -74,6 +74,16 @@
     `(dired-async-message ((t (:foreground ,my/sct-yellow))))
     `(dired-async-mode-message ((t (:background ,my/sct-red))))
 
+    ;; elscreen
+    `(elscreen-tab-background-face ((t (:background ,my/sct-base01))))
+    `(elscreen-tab-control-face ((t (:background ,my/sct-base2
+                                     :foreground ,my/sct-base02
+                                     :underline ,my/sct-base01))))
+    `(elscreen-tab-current-screen-face ((t (:background ,my/sct-base2
+                                            :foreground ,my/sct-base02))))
+    `(elscreen-tab-other-screen-face ((t (:background ,my/sct-base1
+                                          :foreground ,my/sct-base01))))
+
     ;; auto-complete
     `(ac-completion-face ((t (:foreground ,my/sct-base01 :underline t))))
 
