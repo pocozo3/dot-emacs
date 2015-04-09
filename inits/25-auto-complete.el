@@ -37,8 +37,8 @@
   ;; 曖昧マッチ補完時のカーソル色 (GUI のみ有効)
   (setq ac-fuzzy-cursor-color my/sct-violet)
   ;; キーバインド
-  ;;; M-/ を標準の補完機能から auto-complete に変更
-  (bind-key "M-/" 'auto-complete)
+  ;;; auto-complete を能動的に実行する
+  (bind-key "C-." 'auto-complete)
   ;;; 最後に補完したヘルプを表示
   (bind-key "C-c h" 'ac-last-help ac-mode-map)
   ;;; AC メニュー上を C-p/C-n で上下移動できるように

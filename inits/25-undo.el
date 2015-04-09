@@ -7,7 +7,10 @@
 (use-package undo-tree
   :config
   ;; 有効化
-  (global-undo-tree-mode t))
+  (global-undo-tree-mode t)
+  ;; キーバインド
+  ;; Redo のキーバインドに追加する
+  (bind-key "M-/" 'undo-tree-redo))
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
