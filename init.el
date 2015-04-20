@@ -39,10 +39,18 @@
     scratch-pop
     auto-complete
     popup
+    ace-isearch
+    isearch-dabbrev
     undo-tree
     undohist
     point-undo
     magit
+    helm
+    helm-descbinds
+    helm-migemo
+    helm-swoop
+    helm-ag
+    helm-package
     zlc
     ))
 (let ((not-installed (cl-loop for x in installing-package-list

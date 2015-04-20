@@ -160,4 +160,54 @@
     `(magit-signature-good ((t (:foreground ,my/sct-green))))
     `(magit-signature-untrusted ((t (:foreground ,my/sct-cyan))))
     `(magit-tag ((t (:background ,my/sct-base2 :foreground ,my/sct-yellow))))
+
+    ;; helm
+    `(helm-M-x-key ((t (:foreground ,my/sct-orange :underline t))))
+    `(helm-buffer-directory ((t (:foreground ,my/sct-blue :weight bold))))
+    `(helm-buffer-not-saved ((t (:foreground ,my/sct-magenta))))
+    `(helm-buffer-process ((t (:foreground ,my/sct-orange))))
+    `(helm-buffer-saved-out ((t (:background ,my/sct-base03
+                                 :foreground ,my/sct-red))))
+    `(helm-buffer-size ((t (:foreground ,my/sct-base1 :weight bold))))
+    `(helm-candidate-number ((t (:background ,my/sct-yellow
+                                 :foreground ,my/sct-base03))))
+    `(helm-ff-directory ((t (:foreground ,my/sct-blue :weight bold))))
+    `(helm-ff-executable ((t (:foreground ,my/sct-green))))
+    `(helm-ff-file ((t (:inherit font-lock-doc-face))))
+    `(helm-ff-invalid-symlink ((t (:background ,my/sct-red
+                                   :foreground ,my/sct-base03))))
+    `(helm-ff-prefix ((t (:background ,my/sct-yellow
+                          :foreground ,my/sct-base03))))
+    `(helm-ff-symlink ((t (:foreground ,my/sct-cyan))))
+    `(helm-grep-file ((t (:foreground ,my/sct-violet :underline t))))
+    `(helm-grep-finish ((t (:foreground ,my/sct-green))))
+    `(helm-grep-lineno ((t (:foreground ,my/sct-orange))))
+    `(helm-grep-match ((t (:foreground ,my/sct-yellow))))
+    `(helm-grep-running ((t (:foreground ,my/sct-red))))
+    `(helm-history-remote ((t (:foreground ,my/sct-magenta))))
+    `(helm-lisp-completion-info ((t (:foreground ,my/sct-red))))
+    `(helm-lisp-show-completion ((t (:background ,my/sct-base01))))
+    `(helm-locate-finish ((t (:foreground ,my/sct-green))))
+    `(helm-match ((t (:foreground ,my/sct-yellow))))
+    `(helm-moccur-buffer ((t (:foreground ,my/sct-cyan :underline t))))
+    `(helm-prefarg ((t (:foreground ,my/sct-green))))
+    `(helm-resume-need-update ((t (:background ,my/sct-red))))
+    `(helm-selection ((t (:background ,my/sct-green
+                          :foreground ,my/sct-base03 :underline t))))
+    `(helm-selection-line ((t (:background ,my/sct-magenta
+                               :foreground ,my/sct-base03 :underline t))))
+    `(helm-separator ((t (:foreground ,my/sct-red))))
+    `(helm-source-header ((t (:background ,my/sct-blue :foreground ,my/sct-base2
+                              :weight bold :height 1.3 :family "Sans Serif"))))
+    `(helm-visible-mark ((t (:background ,my/sct-cyan
+                             :foreground ,my/sct-base03))))
+
+    ;; helm-swoop
+    `(helm-swoop-line-number-face ((t (:foreground ,my/sct-base01))))
+    `(helm-swoop-target-line-block-face ((t (:background ,my/sct-orange
+                                             :foreground ,my/sct-base03))))
+    `(helm-swoop-target-line-face ((t (:background ,my/sct-yellow
+                                       :foreground ,my/sct-base03))))
+    `(helm-swoop-target-word-face ((t (:background ,my/sct-violet
+                                       :foreground ,my/sct-base2 :weight bold))))
     ))
