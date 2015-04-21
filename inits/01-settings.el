@@ -55,26 +55,6 @@
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
-;; 終了時の環境を永続保存する
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
-;;; 現在、保存するのは M-x のコマンド履歴のみ
-(setq desktop-globals-to-save '(extended-command-history))
-(setq desktop-files-not-to-save "")
-(setq desktop-restore-frames nil)
-
-;;; 保存する履歴数
-(setq history-length 10000)
-
-;;; デスクトップ環境保存ファイル
-(setq desktop-path '("~/.emacs.d/"))
-(setq desktop-dirname "~/.emacs.d/")
-(setq desktop-base-file-name "emacs.desktop")
-
-;;; 環境保存有効化
-(desktop-save-mode 1)
-
-
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;; ミニバッファ履歴を保持する
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;; ミニバッファ履歴保存ファイル指定
@@ -88,6 +68,11 @@
 
 ;;; 有効化
 (savehist-mode t)
+
+;; Helm でもコマンド履歴を表示するように
+(require 'cl-lib)
+(when (not (cl-find 'extended-command-history savehist-minibuffer-history-variables))
+    (add-to-list 'savehist-minibuffer-history-variables 'extended-command-history))
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
