@@ -198,7 +198,8 @@
                                :foreground ,my/sct-base03 :underline t))))
     `(helm-separator ((t (:foreground ,my/sct-red))))
     `(helm-source-header ((t (:background ,my/sct-blue :foreground ,my/sct-base2
-                              :weight bold :height 1.3 :family "Sans Serif"))))
+                              :weight bold :height 1.3
+                              :family "MeiryoKe_PGothic"))))
     `(helm-visible-mark ((t (:background ,my/sct-cyan
                              :foreground ,my/sct-base03))))
 
@@ -209,5 +210,6 @@
     `(helm-swoop-target-line-face ((t (:background ,my/sct-yellow
                                        :foreground ,my/sct-base03))))
     `(helm-swoop-target-word-face ((t (:background ,my/sct-violet
-                                       :foreground ,my/sct-base2 :weight bold))))
+                                       :foreground ,my/sct-base2
+                                       :weight bold))))
     ))
