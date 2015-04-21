@@ -212,4 +212,43 @@
     `(helm-swoop-target-word-face ((t (:background ,my/sct-violet
                                        :foreground ,my/sct-base2
                                        :weight bold))))
+
+    ;; org-mode
+    `(org-agenda-dimmed-todo-face ((t (:foreground ,my/sct-base00))))
+    `(org-agenda-done ((t (:foreground ,my/sct-green :weight bold))))
+    `(org-agenda-restriction-lock ((t (:background ,my/sct-base1
+                                       :foreground ,my/sct-base03
+                                       :weight bold))))
+    `(org-agenda-structure ((t (:foreground ,my/sct-cyan))))
+    `(org-clock-overlay ((t (:background ,my/sct-cyan
+                             :foreground ,my/sct-base03))))
+    `(org-column ((t (:background ,my/sct-base1 :foreground ,my/sct-base03
+                      :strike-through nil :underline nil
+                      :slant normal :weight normal))))
+    `(org-column-title ((t (:background ,my/sct-base1
+                            :foreground ,my/sct-base03
+                            :underline t :weight bold))))
+    `(org-date ((t (:foreground ,my/sct-cyan :underline t))))
+    `(org-date-selected ((t (:foreground ,my/sct-magenta :inverse-video t))))
+    `(org-document-info ((t (:foreground ,my/sct-base2))))
+    `(org-document-title ((t (:foreground ,my/sct-base2 :weight bold))))
+    `(org-drawer ((t (:foreground ,my/sct-blue))))
+    `(org-ellipsis ((t (:foreground ,my/sct-yellow :underline t))))
+    `(org-footnote ((t (:foreground ,my/sct-cyan :underline t))))
+    `(org-formula ((t (:foreground ,my/sct-orange))))
+    `(org-headline-done ((t (:foreground ,my/sct-orange :weight bold))))
+    `(org-latex-and-related ((t (:foreground ,my/sct-yellow))))
+    `(org-mode-line-clock-overrun ((t (:inherit mode-line
+                                       :background ,my/sct-red))) t)
+    `(org-scheduled ((t (:foreground ,my/sct-green :weight bold))))
+    `(org-scheduled-previously ((t (:foreground ,my/sct-orange :weight bold))))
+    `(org-scheduled-today ((t (:foreground ,my/sct-green
+                               :underline t :weight bold))))
+    `(org-sexp-date ((t (:foreground ,my/sct-cyan :weight bold))))
+    `(org-table ((t (:foreground ,my/sct-violet))))
+    `(org-time-grid ((t (:foreground ,my/sct-yellow :weight bold))))
+    `(org-todo ((t (:background ,my/sct-red :foreground ,my/sct-base2
+                    :inverse-video nil :underline nil
+                    :slant normal :weight bold))))
+    `(org-upcoming-deadline ((t (:foreground ,my/sct-orange :weight bold))))
     ))

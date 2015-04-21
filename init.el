@@ -45,6 +45,10 @@
     undohist
     point-undo
     magit
+    open-junk-file
+    htmlize
+    org
+    ox-gfm
     helm
     helm-descbinds
     helm-migemo
