@@ -251,4 +251,38 @@
                     :inverse-video nil :underline nil
                     :slant normal :weight bold))))
     `(org-upcoming-deadline ((t (:foreground ,my/sct-orange :weight bold))))
+
+    ;; calfw
+    `(cfw:face-annotation ((t (:inherit cfw:face-day-title
+                               :foreground ,my/sct-violet))))
+    `(cfw:face-day-title ((t (:background ,my/sct-base02
+                              :overline ,my/sct-base02
+                              :underline ,my/sct-base02))))
+    `(cfw:face-default-content ((t (:foreground ,my/sct-green))))
+    `(cfw:face-disable ((t (:inherit cfw:face-day-title
+                            :foreground ,my/sct-base01))))
+    `(cfw:face-grid ((t (:foreground ,my/sct-base01))))
+    `(cfw:face-header ((t (:foreground ,my/sct-magenta :weight bold))))
+    `(cfw:face-holiday ((t (:background ,my/sct-base02
+                            :foreground ,my/sct-orange
+                            :weight bold))))
+    `(cfw:face-periods ((t (:foreground ,my/sct-cyan))))
+    `(cfw:face-saturday ((t (:foreground ,my/sct-blue :weight bold))))
+    `(cfw:face-select ((t (:inherit face-day-title :overline ,my/sct-blue
+                           :underline ,my/sct-blue))))
+    `(cfw:face-sunday ((t (:foreground ,my/sct-red :weight bold))))
+    `(cfw:face-title ((t (:inherit variable-pitch
+                          :foreground ,my/sct-yellow
+                          :weight bold :height 1.8))))
+    `(cfw:face-today ((t (:foreground ,my/sct-cyan :weight bold))))
+    `(cfw:face-today-title ((t (:inherit face-day-title :overline ,my/sct-red
+                                :underline ,my/sct-red))))
+    `(cfw:face-toolbar ((t (:background ,my/sct-base01
+                            :foreground ,my/sct-base01))))
+    `(cfw:face-toolbar-button-off ((t (:inherit cfw:face-toolbar
+                                       :foreground ,my/sct-base1
+                                       :weight bold))))
+    `(cfw:face-toolbar-button-on ((t (:inherit cfw:face-toolbar
+                                      :foreground ,my/sct-base3
+                                      :weight bold))))
     ))

@@ -49,6 +49,8 @@
     htmlize
     org
     ox-gfm
+    japanese-holidays
+    calfw
     helm
     helm-descbinds
     helm-migemo
