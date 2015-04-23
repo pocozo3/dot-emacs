@@ -60,7 +60,6 @@
   ;; 見出しの余分な * を消す
   (setq org-hide-leading-stars t)
   ;; GTD: DONE の時刻を記録
-  ;; DONEの時刻を記録
   (setq org-log-done 'time)
   ;; テンプレート
   (setq org-capture-templates
