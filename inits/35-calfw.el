@@ -6,8 +6,13 @@
 ;;; ロードと設定
 (use-package calfw
   :init
-  ;; "C-q d" でカレンダービューを開く
-  (bind-key "d" 'cfw:open-calendar-buffer poco-key-map)
+  ;; "C-q c c" でカレンダービューを開く
+  (bind-key "c c" 'cfw:open-calendar-buffer poco-key-map)
+  ;; org との連携
+  (use-package calfw-org
+    :config
+    ;; "C-q c a" で org-agenda をカレンダー上に表示する
+    (bind-key "c a" 'cfw:open-org-calendar poco-key-map))
   ;; 祝日表記を日本の祝日にする
   (use-package holidays
     :config
@@ -15,9 +20,8 @@
     (setq calendar-holidays
           (append japanese-holidays holiday-local-holidays holiday-other-holidays)))
   :config
-  ;; テスト設定
+  ;; 休日を表示する
   (setq cfw:display-calendar-holidays t)
-
   ;; 月名表記
   (setq calendar-month-name-array
         [" 1月(Jan)" " 2月(Feb)" " 3月(Mar)" " 4月(Apr)" " 5月(May)" " 6月(Jun)"

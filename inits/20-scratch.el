@@ -8,7 +8,7 @@
   :defer t
   :init
   ;; キーバインド
-  (bind-key "c" 'scratch-pop poco-key-map))
+  (bind-key "s" 'scratch-pop poco-key-map))
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
