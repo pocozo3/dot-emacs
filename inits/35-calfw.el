@@ -11,6 +11,11 @@
   ;; org との連携
   (use-package calfw-org
     :config
+    ;; org-agenda ソースで表示する内容を制限する
+    ;;; Scheduled と Deadline のみ表示する
+    (setq cfw:org-agenda-schedule-args
+          (append '(:scheduled)
+                  '(:deadline)))
     ;; "C-q c a" で org-agenda をカレンダー上に表示する
     (bind-key "c a" 'cfw:open-org-calendar poco-key-map))
   ;; 祝日表記を日本の祝日にする
@@ -31,5 +36,7 @@
         ["日(Sun)" "月(Mon)" "火(Tue)" "水(Wed)" "木(Thu)" "金(Fri)" "土(Sat)"])
   ;; 週の先頭の曜日 (0: 日曜日)
   (setq calendar-week-start-day 0)
+  ;; カレンダーに開始時刻を表示
+  (setq cfw:event-format-overview "%s%t")
   ;;キーバインド
   )
