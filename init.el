@@ -49,6 +49,7 @@
     htmlize
     org
     ox-gfm
+    org-gcal
     japanese-holidays
     calfw
     helm

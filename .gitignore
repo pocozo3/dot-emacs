@@ -10,6 +10,8 @@
 /backups/
 /elpa/
 /image-dired/
+/org-gcal/
+/request/
 /undohist/
 *.elc
 /ac-comphist.dat

@@ -87,6 +87,7 @@
   (dolist (file
            '("gtd.org"
              "notes.org"
+             "gcal.org"
              ))
     (add-to-list 'org-agenda-files (concat org-directory file)))
   :config

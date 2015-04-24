@@ -22,8 +22,8 @@
   (setq auto-save-buffers-enhanced-interval 1.5)
   ;; 特定のファイルのみ有効にする
   (setq auto-save-buffers-enhanced-include-regexps '(".+")) ;全ファイル
-  ;; not-save-fileと.ignoreは除外する
-  (setq auto-save-buffers-enhanced-exclude-regexps '("^not-save-file" "\\.ignore$"))
+  ;; 除外するファイルを選択
+  (setq auto-save-buffers-enhanced-exclude-regexps '("^not-save-file" "\\.ignore$" "\\.png$"))
   ;; Wroteのメッセージを抑制
   (setq auto-save-buffers-enhanced-quiet-save-p t)
   ;; *scratch* も ~/.emacs.d/backups/scratch に自動保存
@@ -131,6 +131,10 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;; その他の設定
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
+;;; バイナリファイルの登録
+(setq file-name-buffer-file-type-alist
+      '(("\\.png\\" . t)))
+
 ;;; ガベージコレクションの回数を調整
 ;;;; (8MiB にする。デフォルトは 400KiB)
 (setq gc-cons-threshold (* 8 1024 1024))
