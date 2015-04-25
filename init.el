@@ -58,6 +58,7 @@
     helm-swoop
     helm-ag
     helm-package
+    pkgbuild-mode
     zlc
     ))
 (let ((not-installed (cl-loop for x in installing-package-list
