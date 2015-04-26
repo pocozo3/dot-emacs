@@ -65,11 +65,11 @@
   (setq org-capture-templates
         `(
           ("t" "Todo" entry
-           (file+headline (concat org-directory "gtd.org") "Tasks")
-           "*** TODO %?\n    TIME: %T\n    CAPTURED_AT: %a\n    %i")
+           (file (concat org-directory "gtd.org"))
+           "* TODO %?\n    TIME: %T\n    CAPTURED_AT: %a\n    %i")
           ("m" "Memo" entry
            (file+headline nil "Memos")
-           "*** %?\n    TIME: %T\n    CAPTURED_AT: %a\n    %i")
+           "** %?\n    TIME: %T\n    CAPTURED_AT: %a\n    %i")
         ))
 )
 
@@ -86,7 +86,6 @@
   (setq org-agenda-files nil)
   (dolist (file
            '("gtd.org"
-             "notes.org"
              "gcal.org"
              ))
     (add-to-list 'org-agenda-files (concat org-directory file)))
