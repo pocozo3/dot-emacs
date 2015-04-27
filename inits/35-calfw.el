@@ -27,29 +27,32 @@
     (advice-add 'cfw:org-schedule-period-to-calendar
                 :around
                 #'my/cfw:org-schedule-period-to-calendar)
-    ;; "C-q c a" で org-agenda をカレンダー上に表示する
-    (bind-key "c a" 'cfw:open-org-calendar poco-key-map))
-  ;; カレンダーを開く関数を定義
-  (defun my/cfw:open-calendar ()
-    (interactive)
-    (let ((cp
-           (cfw:create-calendar-component-buffer
-            :view 'month
-            :contents-sources
-            (list
-             (cfw:org-create-file-source
-              "ToDo" (concat org-directory "gtd.org") "#859900")
-             (cfw:org-create-file-source
-              "予定" (concat org-directory "gcal.org") "#268bd2")))))
-      (switch-to-buffer (cfw:cp-get-buffer cp))))
+    ;; org-agenda からソースを作成する
+    (defun my/cfw:org-create-source ()
+      (make-cfw:source
+       :name "Org:ToDo"
+       :color my/sct-green
+       :data 'cfw:org-schedule-period-to-calendar))
+    ;; カレンダーを開く関数を定義
+    (defun my/cfw:open-org-calendar ()
+      (interactive)
+      (save-excursion
+        (let* ((my/cfw-org-source1 (my/cfw:org-create-source))
+               (my/cfw-org-source2 (cfw:org-create-file-source
+                                    "GoogleCal"
+                                    (concat org-directory "gcal.org") my/sct-blue))
+               (cp (cfw:create-calendar-component-buffer
+                    :view 'month
+                    :contents-sources (list my/cfw-org-source1 my/cfw-org-source2)
+                    :custom-map cfw:org-schedule-map
+                    :sorter 'cfw:org-schedule-sorter)))
+          (switch-to-buffer (cfw:cp-get-buffer cp))))))
   ;; 祝日表記を日本の祝日にする
   (use-package holidays
     :config
     (use-package japanese-holidays)
     (setq calendar-holidays
           (append japanese-holidays holiday-local-holidays holiday-other-holidays)))
-  ;; "C-q c c" でカレンダービューを開く
-  (bind-key "c c" 'my/cfw:open-calendar poco-key-map)
   :config
   ;; 休日を表示する
   (setq cfw:display-calendar-holidays t)
@@ -65,4 +68,5 @@
   ;; カレンダーに開始時刻を表示
   (setq cfw:event-format-overview "%s%t")
   ;;キーバインド
-  )
+  ;;; "C-q c c" で Org ファイルをカレンダー上に表示する
+  (bind-key "c c" 'my/cfw:open-org-calendar poco-key-map))
