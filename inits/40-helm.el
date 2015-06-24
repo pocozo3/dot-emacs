@@ -50,7 +50,7 @@
     ("C-k" . backward-kill-sexp)
     ("C-M-s" . helm-ag-this-file)
     ("C-:" . helm-swoop-nomigemo)
-    ("C-j" . helm-open-junk-file)))
+    ("C-j" . helm-open-junk-files)))
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
@@ -168,21 +168,6 @@
 ;; helm-open-junk-file: Junk ファイルの一覧表示
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; ;;
 ;;; Junk ファイルの一覧作成
-(use-package em-glob
+(use-package helm-open-junk-files
   :config
-  (defvar junk-file-dir "~/Dropbox/Documents/Junk/")
-  (defvar junk-file-list
-    (reverse (eshell-extended-glob (concat
-                                    (file-name-as-directory junk-file-dir)
-                                    "????-??-??-??????.*")))))
-
-;;; 情報源の設定
-(defvar helm-c-source-junk-files
-  '((name . "Junk Files")
-    (candidates . junk-file-list)
-    (type . file)))
-
-;;; Junk ファイルの一覧表示
-(defun helm-open-junk-file ()
-  (interactive)
-  (helm-other-buffer 'helm-c-source-junk-files "*helm for junk file*"))
+  (setq helm-open-junk-files-dir "~/dropbox/Documents/junk/"))

@@ -20,6 +20,9 @@
 (defvar installing-package-list
   '(
     ;; ここに使っているパッケージを書く。
+    dash
+    f
+    s
     use-package
     init-loader
     auto-save-buffers-enhanced
