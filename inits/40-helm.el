@@ -170,4 +170,4 @@
 ;;; Junk ファイルの一覧作成
 (use-package helm-open-junk-files
   :config
-  (setq helm-open-junk-files-dir "~/dropbox/Documents/junk/"))
+  (setq helm-open-junk-files-dir "~/Dropbox/Documents/Junk/"))
